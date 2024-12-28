@@ -1,0 +1,123 @@
+.cardContainer {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 10px 0;
+    width: 80%;
+    max-width: 600px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardContainer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.info {
+    flex-grow: 1;
+}
+
+.info h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.info p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.counter span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.counter span:hover {
+    color: #007bff;
+}
+
+.counter span:active {
+    transform: scale(0.95);
+}
+/* Mobile-first styling */
+.cardContainer {
+    width: 100%;
+    max-width: none; /* Allow the card to be full width on smaller screens */
+    padding: 10px;
+}
+
+.image img {
+    width: 80px;
+    height: 80px;
+}
+
+.info h3 {
+    font-size: 1rem;
+}
+
+.clearCartBtn {
+    width: 100%;
+    padding: 12px;
+}
+
+.counter {
+    gap: 10px;
+}
+
+/* For larger screens */
+@media (min-width: 768px) {
+    .cardContainer {
+        width: 80%;
+        max-width: 600px;
+    }
+
+    .info h3 {
+        font-size: 1.1rem;
+    }
+
+    .clearCartBtn {
+        width: auto;
+    }
+}
